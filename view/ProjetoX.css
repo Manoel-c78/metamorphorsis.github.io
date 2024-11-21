@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+* {
+
+    font-family: Proxima Nova, -apple-system, Roboto, Arial, sans-serif, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    background-color: rgb(18, 88, 192);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 45px;
+    padding-bottom: 15px;
+    margin-left: -8px;
+    margin-right: 1px;
+    margin-top: -25px;
+}
+
+  .acesso-geral {
+    position: relative;
+    display: inline-block;
+
+  }
+  
+  
+  #login {
+    color: rgb(0, 0, 0);
+      border: 2px solid rgb(0, 0, 0);
+      background-color: rgb(255, 255, 255);
+      padding: 9px;
+      border-radius: 8px;
+      transition: transform .8s ease;
+      cursor: pointer;
+  }
+  
+  #login:hover
+  {
+    transform: scale(1.1);
+     color: rgb(0, 0, 0);
+     border: 2px solid;
+     border-radius: 8px;
+     border-color: rgb(0, 0, 0);
+  }
+  
+  .acesso-tudo {
+    display: none; 
+    position: absolute; 
+    background-color: none; 
+    min-width: 120px;
+    z-index: 1; 
+    border-radius: 10px;
+  }
+  
+  .acesso {
+    color: black;
+    padding: 11px 16px; 
+    text-align: left; 
+    border: 2px solid black;
+    border-radius: 10px;
+    background: none; 
+    cursor: pointer; 
+    width: 80%; 
+    box-sizing: border-box; 
+  }
+  
+  .acesso-geral:hover .acesso-tudo {
+    display: block;
+  }
+
+  #logar{
+    font-family: "SUSE", sans-serif;
+    background-color: #ffffff;
+    padding: 8;
+    width: 85%;
+    margin-top: 5px;
+    margin-right: 15px;
+  }
+  
+  #cadastro{
+    font-family: "SUSE", sans-serif;
+    background-color: white;
+    width: 85%;
+    margin-top: 10px;
+  }
+
+  #inicio{
+    position: relative;
+  }
+
+  #moda{
+    position: relative;
+    width: 100%;
+    height: 450px;
+  }
+
+  #botão{
+    margin-left: 88%;
+  }
+
+  #enviar{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    left: 64%;
+    top: 40%;
+    cursor: pointer;
+  }
+
+  #pesquisa{
+    position: absolute;
+    left: 38%;
+    top: 40%;
+    padding: 10px;
+    padding-right: 2px;
+    width: 25%;
+    border-radius: 2px;
+  }
+
+#minhaloja{
+  position: absolute;
+  color: white;
+  margin-left: 50%;
+  top: 30px;
+}
+
+#entregador{
+  position: absolute;
+  top: 30px;
+  margin-left: 30%;
+  color: white;
+}
+
+#login{
+  margin-right: 15px;
+}
