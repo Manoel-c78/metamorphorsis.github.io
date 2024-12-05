@@ -2,6 +2,8 @@
 
 include('../model/conexao_minhaloja.php');
 
+if(!empty($_GET)){
+
     $razao = mysqli_real_escape_string($conn_loja, $_GET['razao'] ?? '');
     $fantasia = mysqli_real_escape_string($conn_loja, $_GET['fantasia'] ?? '');
     $inscricao = mysqli_real_escape_string($conn_loja, $_GET['inscricao'] ?? '');
@@ -33,6 +35,7 @@ else {
 
 $insert_loja = mysqli_query($conn_loja, "INSERT INTO loja (ID, razao_social, nome_fantasia, inscricao, cpf_cnpj, CEP_loja, rua_loja, numero_loja, bairro_loja, cidade_loja, UF_loja, telefone_loja, email_loja, nome_proprietario, CPF_proprietario, telefone_proprietario, servico_oferecido, horario_funcionamento, horario_fechado, dias_funcionamento) VALUES (NULL, '$razao', '$fantasia', '$inscricao', '$CPF', '$CEP', '$rua', '$numero', '$bairro', '$cidade', '$estado', '$telefone_loja', '$email_loja', '$nome_proprietario', '$CPF_proprietario', '$telefone_proprietario', '$servico', '$funcionamento', '$fechamento', '$dias')");
 }
+}
 
 ?>
 
@@ -49,11 +52,11 @@ $insert_loja = mysqli_query($conn_loja, "INSERT INTO loja (ID, razao_social, nom
     </div>
     <form class="formulario" action="cadastro_loja.php" method="get">
         <label for="razao">Razão Social da loja:    </label>
-        <input type="text" name="razao" id="razao">
+        <input type="text" name="razao" id="razao" required>
         <br><br>
 
         <label for="fantasia">Nome fantasia da loja:    </label>
-        <input type="text" name="fantasia" id="fantasia">
+        <input type="text" name="fantasia" id="fantasia" required>
         <br><br>
 
         <label for="inscricao">Inscrição:   </label> <br>
@@ -62,63 +65,63 @@ $insert_loja = mysqli_query($conn_loja, "INSERT INTO loja (ID, razao_social, nom
         <br><br>
 
         <label for="cpf_cnpj">Digite seu CPF/CNPJ:  </label>
-        <input type="number" name="cpf_cnpj" id="cpf_cnpj">
+        <input type="number" name="cpf_cnpj" id="cpf_cnpj" required>
         <br><br>
 
         <label for="CEP">CEP:   </label>
-        <input type="number" name="CEP" id="CEP">
+        <input type="number" name="CEP" id="CEP" required>
         <br><br>
 
         <label for="rua">Rua:   </label>
-        <input type="text" name="rua" id="rua">
+        <input type="text" name="rua" id="rua" required>
         <br><br>
 
         <label for="numero">Número:   </label>  
-        <input type="number" name="numero" id="numero">
+        <input type="number" name="numero" id="numero" required>
         <br><br>
 
         <label for="bairro">Bairro:   </label>
-        <input type="text" name="bairro" id="bairro">
+        <input type="text" name="bairro" id="bairro" required>
         <br><br>
 
         <label for="cidade">Cidade:   </label>
-        <input type="text" name="cidade" id="cidade">
+        <input type="text" name="cidade" id="cidade" required>
         <br><br>
 
         <label for="estado">Estado:   </label>
-        <input type="text" name="estado" id="estado">
+        <input type="text" name="estado" id="estado" required>
         <br><br>
 
         <label for="telefone_loja">Telefone da loja:    </label>
-        <input type="number" name="telefone_loja" id="telefone_loja">
+        <input type="number" name="telefone_loja" id="telefone_loja" required>
         <br><br>
 
         <label for="email_loja">Email da loja:    </label>      
-        <input type="email" name="email_loja" id="email_loja">
+        <input type="email" name="email_loja" id="email_loja" required>
         <br><br>
 
         <label for="nome_proprietario">Nome do proprietário:    </label>
-        <input type="text" name="nome_proprietario" id="nome_proprietario">
+        <input type="text" name="nome_proprietario" id="nome_proprietario" required>
         <br><br>
 
         <label for="CPF_proprietario">CPF do proprietário:  </label>
-        <input type="number" name="CPF_proprietario" id="CPF_proprietario">
+        <input type="number" name="CPF_proprietario" id="CPF_proprietario" required>
         <br><br>
 
         <label for="telefone_proprietario">Telefone do proprietário:    </label>
-        <input type="number" name="telefone_proprietario" id="telefone_proprietario">
+        <input type="number" name="telefone_proprietario" id="telefone_proprietario" required>
         <br><br>
 
         <label for="servico">Serviço oferecido: </label>
-        <input type="text" name="servico" id="servico">
+        <input type="text" name="servico" id="servico" required>
         <br><br>
 
         <label for="funcionamento">Hórario de funcionamento:    </label>
-        <input type="time" name="funcionamento" id="funcionamento">
+        <input type="time" name="funcionamento" id="funcionamento" required>
         <br><br>
 
         <label for="fechamento">Hórario de fechamento:    </label>
-        <input type="time" name="fechamento" id="fechamento">
+        <input type="time" name="fechamento" id="fechamento" required>
         <br><br>
 
         <label for="dias">Selecione os dias da semana: </label> <br>
