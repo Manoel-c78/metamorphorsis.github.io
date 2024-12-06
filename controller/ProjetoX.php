@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
     <link rel="shortcut icon" href="./Imagens/header3.png">
     <link rel="stylesheet" href="../view/ProjetoX.css">
     <title>ClouDri - Sua loja de moda mais rápida!</title>
@@ -30,9 +30,10 @@
     <div id="inicio">
 
     <img src="../view/moda.jpg" alt="moda" id="moda">
-    <input type="search" name="pesquisa" id="pesquisa" placeholder="Busque por roupas, itens, lojas e muito mais...">
+   <center> <input type="search" name="pesquisa" id="pesquisa" placeholder="Busque por roupas, itens, lojas e muito mais...">
     <input type="submit" value="Buscar" id="enviar">
-
+    </center>
+    
     </div>   
         
     
@@ -55,6 +56,7 @@
     <div id="lojas">
     
     <tbody>
+    <h1>Lojas</h1>
         <?php 
             while($cadastro = $result->fetch_object()){
 

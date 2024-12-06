@@ -1,6 +1,6 @@
 <?php
 
-$servidor_loja = "localhost:3307";
+$servidor_loja = "localhost";
 $usuario_loja = "root";
 $pass_loja = "";
 $db_loja = "projetox";

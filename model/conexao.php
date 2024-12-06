@@ -1,6 +1,6 @@
 <?php 
 
-    $servidor = "localhost:3307";
+    $servidor = "localhost";
     $user = "root";
     $pass = "";
     $db = "projetoX";

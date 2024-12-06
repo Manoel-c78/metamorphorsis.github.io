@@ -47,9 +47,10 @@ $insert_loja = mysqli_query($conn_loja, "INSERT INTO loja (ID, razao_social, nom
     <title>ClouDrie - Cadastro de loja</title>
 </head>
 <body>
-    <div class="titulo">
-    <h1>Cadastro</h1>
-    </div>
+
+    <h1 class="titulo">Cadastro</h1>
+        <img src="../view/logo.png" alt="moda" class="moda">
+
     <form class="formulario" action="cadastro_loja.php" method="get">
         <label for="razao">Razão Social da loja:    </label>
         <input type="text" name="razao" id="razao" required>
