@@ -2,6 +2,8 @@
 
     include('../model/conexao.php');
 
+    if(!empty($_GET)){
+
     $nome = mysqli_real_escape_string ($conn, $_GET['nome'] ?? '');
     $celular = mysqli_real_escape_string ($conn, $_GET['celular'] ?? '');
     $sexo = mysqli_real_escape_string ($conn, $_GET['sexo'] ?? '');
@@ -18,6 +20,7 @@ if (mysqli_num_rows($Result) > 0) {
 else {
 
 $colocar = mysqli_query($conn, "INSERT INTO cadastro(ID, nome, celular, sexo, email, senha) VALUES(NULL, '$nome', '$celular', '$sexo', '$email', '$senha')");
+}
 }
 
 ?>
@@ -52,6 +55,9 @@ $colocar = mysqli_query($conn, "INSERT INTO cadastro(ID, nome, celular, sexo, em
 <body>
     <div class="titulo">
     <h1>Cadastro</h1>
+
+        <img src="../view/logo.png" alt="moda" id="moda">
+
     </div>
     <form class="formulario2" action="cadastro.php" method="get">
 

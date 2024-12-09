@@ -15,11 +15,19 @@
         <a href="entregador.php" id="entregador">Seja um entregador</a>
 
         <div class="acesso-geral">
-                    <button id="login"> <b>Acesse sua conta</b></button></a>
-                    <div class="acesso-tudo">
-                        <a href="logar.php"><button class="acesso" id="logar">Login</button></a>
-                        <a href="cadastro.php"><button class="acesso" id="cadastro">Cadastre-se</button></a>
-                    </div>
+        <?php if (isset($_SESSION['nome'])): ?>
+            
+            <span>Bem-vindo, <?php echo htmlspecialchars($_SESSION['nome']); ?></span>
+            <a href="testelogin.php"><button id="logout">Sair</button></a>
+        <?php else: ?>
+            
+            <button id="login"><b>Acesse sua conta</b></button>
+            <div class="acesso-tudo">
+                <a href="logar.php"><button class="acesso" id="logar">Login</button></a>
+                <a href="cadastro.php"><button class="acesso" id="cadastro">Cadastre-se</button></a>
+            </div>
+        <?php endif; ?>
+    </div>
 
         <div id="botão">
 
@@ -61,9 +69,9 @@
         <?php 
             while($cadastro = $result->fetch_object()){
                 
-                $url = "detalhes_loja.php?ID=" . $cadastro->ID;
+                $url = "loja.php?ID=" . $cadastro->ID;
 
-                echo "<a href='detalhes_loja.php?ID=" . $cadastro->ID . "' style='text-decoration: none;'>";
+                echo "<a href='loja.php?ID=" . $cadastro->ID . "' style='text-decoration: none;'>";
                 echo "<div class='tarefa' style='width: 350px;; height: 150px; border: 1px solid #ddd; padding: 10px; background-color: #f8f8f8; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); border-radius: 10px;'>";
 
                 echo "<div style='text-align: center; margin-bottom: 10px;'>";
