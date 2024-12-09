@@ -2,7 +2,7 @@ body{
     background-image: url(../view/fund.loja.jfif);
 }
 
-.formulario, .moda{
+.formulario, .moda, #direitos{
     position: absolute;
 }
 
@@ -28,4 +28,10 @@ body{
 .moda:hover{
     transform: scale(1.1);
     transition: transform 0.3s ease;
+}
+
+#direitos{
+    z-index: 3;
+    color: #d30856;
+    top: 800px;
 }

@@ -56,16 +56,16 @@ $colocar = mysqli_query($conn, "INSERT INTO cadastro(ID, nome, celular, sexo, em
     <form class="formulario2" action="cadastro.php" method="get">
 
         <label for="nome">Nome</label>
-        <input type="text" name="nome" id="nome" placeholder="Insira seu nome">
+        <input type="text" name="nome" id="nome" placeholder="Insira seu nome" required>
 
         <label for="celular">Telefone</label>
-        <input type="text" name="celular" id="celular" oninput="formatarTelefone(this)" placeholder="(XX)XXXXX-XXXX" maxlength="15">
+        <input type="text" name="celular" id="celular" oninput="formatarTelefone(this)" placeholder="(XX)XXXXX-XXXX" maxlength="15" required>
 
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="Insira seu email">
+        <input type="email" name="email" id="email" placeholder="Insira seu email" required>
 
         <label for="senha">Senha</label>
-        <input type="password" name="senha" id="senha" placeholder="Insira sua senha">
+        <input type="password" name="senha" id="senha" placeholder="Insira sua senha" required>
 
         <div class="sexo">
     <label>Sexo</label> <br>

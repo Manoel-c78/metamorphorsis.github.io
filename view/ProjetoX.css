@@ -10,37 +10,45 @@
 
 
 header{
-    background-color: rgb(18, 88, 192);
+    position: fixed;
+    z-index: 2;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding-top: 45px;
+    width: 1500px;
+    padding-top: 1px;
     padding-bottom: 15px;
     margin-left: -8px;
     margin-right: 1px;
     margin-top: -25px;
-}
+    border-bottom: 0.5px solid #555252;  
+  }
 
   .acesso-geral {
+    z-index: 8;
+    color: black;
     position: relative;
     display: inline-block;
 
   }
   
   
-  #login {
-    color: rgb(0, 0, 0);
+  #login{
+      position: relative;
+      color: rgb(0, 0, 0);
       border: 2px solid rgb(0, 0, 0);
       background-color: rgb(255, 255, 255);
+      right: 180px;
       padding: 9px;
       border-radius: 8px;
       transition: transform .8s ease;
       cursor: pointer;
+      top: 20px;
   }
   
-  #login:hover
-  {
+  #login:hover{
     transform: scale(1.1);
      color: rgb(0, 0, 0);
      border: 2px solid;
@@ -49,6 +57,7 @@ header{
   }
   
   .acesso-tudo {
+    z-index: 9;
     display: none; 
     position: absolute; 
     background-color: none; 
@@ -58,15 +67,17 @@ header{
   }
   
   .acesso {
+    z-index: 3;
     color: black;
-    padding: 11px 16px; 
-    text-align: left; 
+    padding: 11px 16px;
+    margin-top: 100px;
+    text-align: left;
     border: 2px solid black;
     border-radius: 10px;
-    background: none; 
-    cursor: pointer; 
-    width: 80%; 
-    box-sizing: border-box; 
+    background: none;
+    cursor: pointer;
+    width: 80%;
+    box-sizing: border-box;
   }
   
   .acesso-geral:hover .acesso-tudo {
@@ -74,19 +85,23 @@ header{
   }
 
   #logar{
+    position: relative;
     font-family: "SUSE", sans-serif;
     background-color: #ffffff;
+    right: 180px;
     padding: 8;
     width: 85%;
-    margin-top: 5px;
+    margin-top: 25px;
     margin-right: 15px;
   }
   
   #cadastro{
+    position: relative;
     font-family: "SUSE", sans-serif;
     background-color: white;
+    right: 180px;
     width: 85%;
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
   #inicio{
@@ -94,7 +109,9 @@ header{
   }
 
   #moda{
+    z-index: 1;
     position: relative;
+    top: 120px;
     width: 100%;
     height: 450px;
   }
@@ -123,20 +140,73 @@ header{
     border-radius: 2px;
   }
 
-#minhaloja{
-  position: absolute;
-  color: white;
-  margin-left: 50%;
-  top: 30px;
-}
+  #minhaloja {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    margin-left: 50%;
+    top: 80px;
+  }
 
-#entregador{
-  position: absolute;
-  top: 30px;
-  margin-left: 30%;
-  color: white;
-}
+  #entregador {
+    position: absolute;
+    z-index: 5;
+    top: 80px;
+    margin-left: 30%;
+    color: rgb(0, 0, 0);
+  }
 
 #login{
   margin-right: 15px;
+}
+
+.logo{
+  margin-top: 30px;
+  width: 100px;
+  margin-left: 20px;
+  transform: scale(1.1);
+
+}
+
+.logo:hover{
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.tarefa{
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+#titulo_loja{
+    margin-top: 120px;
+    margin-left: 90px;
+}
+
+#nome_fantasia{
+  position: relative;
+  margin-left: 250px;
+  margin-bottom: 60px;
+}
+
+#foto_loja{
+  width: 125px;
+  margin-right: 200px;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover .tarefa {
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+}
+
+.tarefa{
+  z-index: 1;
+  transition: transform 0.9s ease;
+}
+
+.tarefa:hover{
+  transform: scale(1.05);
+  transition: transform 0.9s ease;
 }
